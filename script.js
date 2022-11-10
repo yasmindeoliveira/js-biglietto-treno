@@ -10,19 +10,19 @@ if (eta < 0) {
 
     parseInt(chilometri);
     let prezzoBiglietto = 0.21 * chilometri;
-    let prezzoBigliettoIntero = Math.floor(prezzoBiglietto);
-    console.log("Prezzo totale del Biglietto: " + prezzoBigliettoIntero + "€");
+    let prezzoBigliettoDecimale = prezzoBiglietto.toFixed(2);
+    console.log("Prezzo totale del Biglietto: " + prezzoBigliettoDecimale + "€");
 
     if (eta < 18) {
         let scontoMinorenne = prezzoBiglietto * 20 / 100;
-        let scontoMinorenneTotale = prezzoBigliettoIntero - scontoMinorenne;
-        let scontoMinorenneInteroTotale = Math.floor(scontoMinorenneTotale);
-        console.log("Totale scontato per minorenni: " + scontoMinorenneInteroTotale + "€");
+        let scontoMinorenneTotale = prezzoBigliettoDecimale - scontoMinorenne;
+        let scontoMinorenneDecimaleTotale = scontoMinorenneTotale.toFixed(2);
+        console.log("Totale scontato per minorenni: " + scontoMinorenneDecimaleTotale + "€");
     } else if (eta >= 65) {
         let scontoSenior = prezzoBiglietto * 40 / 100;
-        let scontoSeniorTotale = prezzoBigliettoIntero - scontoSenior;
-        let scontoSeniorInteroTotale = Math.floor(scontoSeniorTotale);
-        console.log("Totale scontato per seniors: " + scontoSeniorInteroTotale + "€");
+        let scontoSeniorTotale = prezzoBigliettoDecimale - scontoSenior;
+        let scontoSeniorDecimaleTotale = scontoSeniorTotale.toFixed(2);
+        console.log("Totale scontato per seniors: " + scontoSeniorDecimaleTotale + "€");
     };
 
 };
