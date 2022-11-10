@@ -27,3 +27,6 @@ if (eta < 0) {
 
 };
 
+document.getElementById("p-chilometri") .innerHTML = chilometri
+document.getElementById("p-eta") .innerHTML = eta
+
