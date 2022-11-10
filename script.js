@@ -2,7 +2,7 @@ let chilometri = prompt("Quanti chilometri desideri percorrere?");
 let eta = prompt("Inserisca la sua età:");
 
 console.log("Chilometri da percorrere: " + chilometri + "km");
-console.log("Età passegiero: " + eta);
+console.log("Età passeggiero: " + eta);
 
 if (eta < 0) {
     console.log("Scusaci, l'operazione non può essere eseguita. Perfavore inserire un'età seperiore a 0");
