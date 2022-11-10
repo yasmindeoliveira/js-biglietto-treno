@@ -13,20 +13,29 @@ if (eta < 0) {
     let prezzoBigliettoDecimale = prezzoBiglietto.toFixed(2);
     console.log("Prezzo totale del Biglietto: " + prezzoBigliettoDecimale + "€");
 
+    document.getElementById("p-prezzo") .innerHTML = prezzoBigliettoDecimale + "€";
+
     if (eta < 18) {
         let scontoMinorenne = prezzoBiglietto * 20 / 100;
         let scontoMinorenneTotale = prezzoBigliettoDecimale - scontoMinorenne;
         let scontoMinorenneDecimaleTotale = scontoMinorenneTotale.toFixed(2);
         console.log("Totale scontato per minorenni: " + scontoMinorenneDecimaleTotale + "€");
+
+        document.getElementById("p-prezzoMinorenne") .innerHTML = scontoMinorenneDecimaleTotale + "€";
+
     } else if (eta >= 65) {
         let scontoSenior = prezzoBiglietto * 40 / 100;
         let scontoSeniorTotale = prezzoBigliettoDecimale - scontoSenior;
         let scontoSeniorDecimaleTotale = scontoSeniorTotale.toFixed(2);
         console.log("Totale scontato per seniors: " + scontoSeniorDecimaleTotale + "€");
+
+        document.getElementById("p-prezzoSenior") .innerHTML = scontoSeniorDecimaleTotale + "€";
+
     };
 
 };
 
-document.getElementById("p-chilometri") .innerHTML = chilometri
-document.getElementById("p-eta") .innerHTML = eta
+document.getElementById("p-chilometri") .innerHTML = chilometri + "km";
+document.getElementById("p-eta") .innerHTML = eta;
+
 
